@@ -5,4 +5,4 @@ resources:
   - psv.yaml
   - promo-configmap.yaml
   - deployment.yaml
-  - svc.yml
+  - svc.yaml
