@@ -6,7 +6,6 @@ metadata:
     vol: prom-storage
     type: local
 spec:
-  StorageClass:  xclass
   accessModes:
     - ReadWriteMany
   resources:
