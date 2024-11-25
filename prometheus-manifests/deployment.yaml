@@ -31,9 +31,9 @@ spec:
             memory: 200Mi
         volumeMounts:
         - name: prometheus-persistent-storage-store
-          mountPath: prometheus_data/
+          mountPath: /prometheus_data
         - name: prometheus-script
-          mountPath: /prometheus.yml
+          mountPath: /opt/prometheus.yml
           subPath: prometheus.yml  
       volumes:
       - name: prometheus-persistent-storage-store
