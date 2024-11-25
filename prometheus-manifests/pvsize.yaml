@@ -6,7 +6,7 @@ metadata:
 spec:
   storageClassName: xclass
   capacity:
-    storage: 1Gi
+    storage: 3Gi
   accessModes:
     - ReadWriteMany
   hostPath:
