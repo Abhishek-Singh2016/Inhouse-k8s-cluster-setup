@@ -18,8 +18,8 @@ spec:
       - image: prom/prometheus
         name: prom
         args:
-        - '--config.file=/prometheus.yml'
-        - --storage.tsdb.path='prometheus_data/
+        - '--config.file=/opt/prometheus.yml'
+        - --storage.tsdb.path='/opt/prometheus_data/
         ports:
         - containerPort: 9090
         resources:
