@@ -4,6 +4,7 @@ kind: Kustomization
 
 resources:
   - psv.yaml
+  - pvsize.yaml
   - promo-configmap.yaml
   - deployment.yaml
   - svc.yaml
