@@ -4,6 +4,7 @@ metadata:
   name: prom-storage
   namespace: default
 spec:
+  persistentVolumeReclaimPolicy: Retain
   storageClassName: xclass
   capacity:
     storage: 3Gi

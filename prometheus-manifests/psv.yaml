@@ -6,7 +6,6 @@ metadata:
     vol: prom-storage
     type: local
 spec:
-  persistentVolumeReclaimPolicy: Retain
   StorageClass:  xclass
   accessModes:
     - ReadWriteMany
