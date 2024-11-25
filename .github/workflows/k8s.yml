@@ -39,3 +39,4 @@ jobs:
           kubectl get pods -A --kubeconfig ./kube-config/local-k8s-config
           kubectl get ns -A --kubeconfig ./kube-config/local-k8s-config
           kubectl get svc -A --kubeconfig ./kube-config/local-k8s-config
+          kubectl apply -f custom.yaml --kubeconfig ./kube-config/local-k8s-config
