@@ -36,3 +36,6 @@ jobs:
           echo test, and deploy your project.
           ls -la
           kubectl get nodes --kubeconfig ./kube-config/local-k8s-config
+          kubectl get pods -A --kubeconfig ./kube-config/local-k8s-config
+          kubectl get ns -A --kubeconfig ./kube-config/local-k8s-config
+          kubectl get svc -A --kubeconfig ./kube-config/local-k8s-config
