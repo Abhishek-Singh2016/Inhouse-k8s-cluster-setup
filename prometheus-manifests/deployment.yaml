@@ -22,6 +22,13 @@ spec:
         - --storage.tsdb.path='prometheus_data/
         ports:
         - containerPort: 9090
+        resources:
+          limits:
+            cpu: 200m
+            memory: 200Mi
+          requests:
+            cpu: 200m
+            memory: 200Mi
         volumeMounts:
         - name: prometheus-persistent-storage-store
           mountPath: prometheus_data/
