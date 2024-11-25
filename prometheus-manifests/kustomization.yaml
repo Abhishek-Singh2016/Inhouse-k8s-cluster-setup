@@ -8,3 +8,4 @@ resources:
   - promo-configmap.yaml
   - deployment.yaml
   - svc.yaml
+  - istio-gateway.yaml
