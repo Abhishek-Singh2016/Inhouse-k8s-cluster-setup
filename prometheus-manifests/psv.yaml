@@ -5,8 +5,11 @@ metadata:
   labels:
     vol: prom-storage
 spec:
+  storageClassName: manual
   accessModes:
     - ReadWriteMany
+  hostPath:
+    path: "/opt/prometheus_data"
   resources:
     requests:
       storage: 1Gi
