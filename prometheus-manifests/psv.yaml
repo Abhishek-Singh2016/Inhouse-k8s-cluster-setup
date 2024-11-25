@@ -4,6 +4,7 @@ metadata:
   name: prom-storage-pvc
   labels:
     vol: prom-storage
+    type: local
 spec:
   accessModes:
     - ReadWriteMany
