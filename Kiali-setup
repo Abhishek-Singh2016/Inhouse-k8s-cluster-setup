@@ -1,0 +1,13 @@
+#Create Kiali dstination rule
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: kiali-outlier-detection
+spec:
+  host: kiali.kiali-dashboard.svc.cluster.local
+  trafficPolicy:
+    outlierDetection:
+      consecutive5xxErrors: 1       # Eject after a single 5xx error
+      interval: 10s                 # Check every 10 seconds
+      baseEjectionTime: 3m          # Keep the "dead" node out for 3 minutes
+      maxEjectionPercent: 100       # Allow ejecting all pods if they are all unreachable
