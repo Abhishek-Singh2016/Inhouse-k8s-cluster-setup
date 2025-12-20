@@ -1,0 +1,72 @@
+{"level":"fatal","ts":"2025-12-11T11:12:16.360156Z","caller":"etcdmain/etcd.go:204","msg":"discovery failed","error":"error validating peerURLs {ClusterID:f8550f0a7f0470f6 Members:[&{ID:2f5fd027fa6243cd RaftAttributes:{PeerURLs:[https://192.168.0.121:2380] IsLearner:false} Attributes:{Name:worker001.linuxtechi.org ClientURLs:[https://192.168.0.121:2379]}} &{ID:57ec009597c2a69f RaftAttributes:{PeerURLs:[https://192.168.0.66:2380] IsLearner:false} Attributes:{Name:master01.linuxtechi.org ClientURLs:[https://192.168.0.66:2379]}} &{ID:9e8037f0ab16d351 RaftAttributes:{PeerURLs:[https://192.168.0.115:2380] IsLearner:false} Attributes:{Name:master001.linuxtechi.org ClientURLs:[https://192.168.0.115:2379]}} &{ID:2732fb5d4bbed8e5 RaftAttributes:{PeerURLs:[https://192.168.0.3:2380] IsLearner:false} Attributes:{Name:windows-etcd-node ClientURLs:[https://192.168.0.3:2379]}}] RemovedMemberIDs:[]}: member count is unequal","stacktrace":"go.etcd.io/etcd/server/v3/etcdmain.startEtcdOrProxyV2\n\tgo.etcd.io/etcd/server/v3/etcdmain/etcd.go:204\ngo.etcd.io/etcd/server/v3/etcdmain.Main\n\tgo.etcd.io/etcd/server/v3/etcdmain/main.go:40\nmain.main\n\tgo.etcd.io/etcd/server/v3/main.go:31\nruntime.main\n\truntime/proc.go:267"}
+
+
+
+
+  https://192.168.0.3:2379 | 2732fb5d4bbed8e5 |   3.6.6 |           3.5.0 |   41 MB |  15 MB |                   64% | 2.1 GB |      true |      false |      3032 |    3146612 |            3146612 |        |                          |             false |
+| https://192.168.0.121:2379 | 2f5fd027fa6243cd |  3.5.15 |                 |   40 MB |  15 MB |                   63% |    0 B |     false |      false |      3032 |    3146613 |            3146613 |        |                          |             false |
+|  https://192.168.0.66:2379 | 57ec009597c2a69f |  3.5.15 |                 |   41 MB |  15 MB |                   64% |    0 B |     false |      false |      3032 |    3146614 |            3146613 |        |                          |             false |
+| https://192.168.0.115:2379 | 9e8037f0ab16d351 |  3.5.15 |                 |   41 MB |  15 MB |                   64% |    0 B |     false |      false |      3032 |    3146615 |            3146615 |        |   
+
+
+
+
+
+
+[2025-12-15T10:11:06.764Z] "GET / HTTP/1.1" 503 UC upstream_reset_before_response_started{connection_termination} - "-" 0 95 5 - "172.17.115.67" "Mozilla/5.0 (Windows NT 10.0
+; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" "0b04eab6-8d2e-442b-823d-2992a1274596" "kiali.linuxtechi.org" "172.17.115.68:20001" outbo
+und|20001||kiali.istio-system.svc.cluster.local 172.17.177.178:58226 172.17.177.178:8080 172.17.115.67:48044 - -
+
+
+
+eyJhbGciOiJSUzI1NiIsImtpZCI6IjV0elYyM3dXbWduQ0JnS0NLUVgyX2w5MXFCN2N5TE9QUnByQWtpV3E0elkifQ.eyJhdWQiOlsiaHR0cHM6Ly9rdWJlcm5ldGVzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwiXSwiZXhwIjoyMDgxMTk5ODM5LCJpYXQiOjE3NjU4Mzk4MzksImlzcyI6Imh0dHBzOi8va3ViZXJuZXRlcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsIiwianRpIjoiNThjMTg4MmItNmM1ZS00NjM3LTk5YjEtOTE2MjhlNmYyYjdmIiwia3ViZXJuZXRlcy5pbyI6eyJuYW1lc3BhY2UiOiJraWFsaS1kYXNoYm9hcmQiLCJzZXJ2aWNlYWNjb3VudCI6eyJuYW1lIjoia2lhbGktdmlld2VyLXNhIiwidWlkIjoiN2RmYWE1NzAtODkzNi00ZWE5LTkyOTYtODE2N2ZjYzQ3ZmU5In19LCJuYmYiOjE3NjU4Mzk4MzksInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpraWFsaS1kYXNoYm9hcmQ6a2lhbGktdmlld2VyLXNhIn0.h8dnbiLk0kjRMB9gTR0CdddAcUyiYWKRUKRGOqk9abfXuEm6aaOMGGlScOQ_wd0oI307pe_99Xg7qnr0QtrRMRmcV7E_sZuidw808u2P9Tt0Cjqid9oLMo1YsVxZDWDFqQo8QSRq3pP9LMLfhkLzmAcm_X_Se_oe0YDLDygLDkatl1XO7NIPrM61c5KwovcG5-15gcyBcCz-X05WMhIUd2dXRxtnLw-AOa0dAXA7qGio7UiQD7azR63IzgHozpZ2u81JbSxGwBidLE6JUiRzLkMHrBPBJ_4JadPt41PP00omci87hy3_CZEvLcwUFgw1-u49oKkZie2rFh8HV2HPGg  
+
+
+working etcdctl command:  etcdctl --endpoints=https://192.168.0.3:2379 --cert=/etc/kubernetes/pki/etcd/peer.crt --cacert="/etc/kubernetes/pki/etcd/ca.crt" --key=/etc/kubernetes/pki/etcd/peer.key endpoint status --cluster -w table
+
+
+
+(ulimit -n) to: 1073741816
+
+
+warning envoy main external/envoy/source/server/server.cc:970   There is no configured limit to the number of allowed active downstream
+connections. Configure a limit in `envoy.resource_monitors.global_downstream_max_connections` resource monitor. thread=17
+
+
+ ./etcd --name windows-etcd-node --data-dir C:\etcd-data --listen-peer-urls=https://192.168.0.3:2380 --initial-advertise-peer-urls="https://192.168.0.3:2379" --listen-client-urls="https://192.168.0.3:2379" --advertise-client-urls=https://192.168.0.3:2379 --initial-cluster-state=existing  --initial-cluster="windows-etcd-node=https://192.168.0.3:2380,worker001.linuxtechi.org=https://192.168.0.121:2380,master01.linuxtechi.org=https://192.168.0.66:2380,master001.linuxtechi.org=https://192.168.0.115:2380" --peer-trusted-ca-file=C:\etcd-data\pki\etcd\ca.crt --peer-cert-file="C:\etcd-data\pki\etcd\infra3.crt" --trusted-ca-file="C:\etcd-data\pki\etcd\ca.crt" --peer-key-file="C:\etcd-data\pki\etcd\infra3.key" --cert-file="C:\etcd-data\pki\etcd\infra3.crt" --key-file=C:\etcd-data\pki\etcd\infra3.key
+ 
+ 
+ 
+ sc create etcd-win-node binPath='C:\Users\abhis\OneDrive\Desktop\etcd-v3.6.6-windows-amd64\etcd.exe --name windows-etcd-node --data-dir C:\etcd-data --listen-peer-urls=https://192.168.0.3:2380 --initial-advertise-peer-urls=https://192.168.0.3:2380 --listen-client-urls=https://192.168.0.3:2379 --advertise-client-urls=https://192.168.0.3:2379 --client-cert-auth=false --initial-cluster-state=existing --initial-cluster=windows-etcd-node=https://192.168.0.3:2380,worker001.linuxtechi.org=https://192.168.0.121:2380,master01.linuxtechi.org=https://192.168.0.66:2380,master001.linuxtechi.org=https://192.168.0.115:2380 --peer-trusted-ca-file=C:\etcd-data\pki\etcd\ca.crt --peer-cert-file=C:\etcd-data\pki\etcd\infra3.crt --peer-key-file=C:\etcd-data\pki\etcd\infra3.key --trusted-ca-file=C:\etcd-data\pki\etcd\ca.crt --cert-file=C:\etcd-data\pki\etcd\infra3.crt --key-file=C:\etcd-data\pki\etcd\infra3.key --log-outputs C:\etcd-data\log\etcd.log" DisplayName="etcd Windows Cluster Node (192.168.0.3)' start=auto
+
+
+kubectl apply -f - <<EOF
+apiVersion: networking.istio.io/v1alpha3
+kind: ServiceEntry
+metadata:
+  name: kiali-ext
+spec:
+  hosts:
+  - "kiali.linuxtechi.org"
+  - "192.168.0.241"
+  ports:
+  - number: 80
+    name: http
+    protocol: HTTP
+  resolution: DNS
+  location: MESH_EXTERNAL
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: ServiceEntry
+metadata:
+  name: cnn
+spec:
+  hosts:
+  - edition.cnn.com
+  ports:
+  - number: 443
+    name: tls
+    protocol: TLS
+  resolution: DNS
+  location: MESH_EXTERNAL
+EOF
