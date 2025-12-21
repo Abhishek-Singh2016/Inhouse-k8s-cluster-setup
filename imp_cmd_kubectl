@@ -1,0 +1,1 @@
+kubectl delete pods --all-namespaces --field-selector spec.nodeName=192.168.0.48 --force --grace-period=0
