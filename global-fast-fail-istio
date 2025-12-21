@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: global-fast-fail
+  namespace: istio-system # Applying it here targets the whole mesh
+spec:
+  host: "*.cluster.local"
+  trafficPolicy:
+    connectionPool:
+      tcp:
+        connectTimeout: 3s        # Drop dead connections faster (Default is often 10s+)
+    outlierDetection:
+      consecutiveGatewayErrors: 1 # Eject on the very first "No route to host" (503)
+      interval: 10s               # Scan window
+      baseEjectionTime: 2m        # Keep the bad node out for 2 minutes
+      maxEjectionPercent: 100     # Allow ejecting all pods on a dead node
