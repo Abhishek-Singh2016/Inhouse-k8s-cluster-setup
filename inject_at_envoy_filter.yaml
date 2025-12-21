@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: EnvoyFilter
+metadata:
+  name: global-upstream-timeout
+  namespace: istio-system
+spec:
+  configPatches:
+    - applyTo: CLUSTER
+      match:
+        context: ANY
+      patch:
+        operation: MERGE
+        value:
+          # Forces a shorter connection timeout at the socket level
+          connect_timeout: 2s
+          # Configures the 'Outlier Detection' at the Envoy level
+          outlier_detection:
+            consecutive_gateway_failure: 1
+            base_ejection_time: 60s
