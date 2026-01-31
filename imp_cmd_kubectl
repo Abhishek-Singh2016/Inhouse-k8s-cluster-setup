@@ -20,3 +20,34 @@ history | sed 's/^[ ]*[0-9]*[ ]*//' | head -n -1
 history | sed 's/^[ ]*[0-9]*[ ]*//' | head -n -3
 history | sed 's/^[ ]*[0-9]*[ ]*//' | head -n 
 history | sed 's/^[ ]*[0-9]*[ ]*//'
+
+#service practice commands
+
+    1  kubectl get svc -A
+    2  kubectl edit svc kubernetes 
+    3  kubectl get endpoints
+    4  kubectl get deployments
+    5  kubectl edit deployment simple-webapp-deployment
+    6  kubectl get pods
+    7  kubectl get svc
+    8  curl -vk https://10.43.0.1
+    9  kubectl create service nodeport webapp-service 8080:8080 $do > simple-webapp.yaml
+   10  kubectl create service nodeport webapp-service --tcp=8080:8080 $do > simple-webapp.yaml
+   11  vi simple-webapp.yaml 
+   12  ls
+   13  vi service-definition-1.yaml 
+   14  kubectl apply -f service-definition.yaml
+   15  kubectl apply -f service-definition-1.yaml
+   16  vi service-definition-1.yaml 
+   17  kubectl apply -f service-definition-1.yaml
+   18  vi service-definition-1.yaml 
+   19  kubectl apply -f service-definition-1.yaml
+   20  history | head -n 1
+   21  history | head -n -2
+   22  ls
+   23  cat simple-webapp.yaml 
+   24  env
+   25  export do="--dry-run=client -o yaml"
+   26  kubectl create service nodeport webapp-service --tcp=8080:8080 $do  > simple-we
+   27  bapp.yaml
+   28  kubectl create service nodeport webapp-service --tcp=8080:8080 $do  > simple-we.yaml
