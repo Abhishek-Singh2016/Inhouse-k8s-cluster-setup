@@ -1,1 +1,22 @@
 kubectl delete pods --all-namespaces --field-selector spec.nodeName=192.168.0.48 --force --grace-period=0
+kubectl get pods -A
+kubectl get deployments -A
+kubectl edit deployment frontend-deployment
+kubectl edit deployment frontend-deployment
+ls
+vi deployment-definition-1.yaml 
+vi deployment-definition-1.yaml
+kubectl apply -f deployment-definition-1.yaml
+export do="--dry-run=client -o yaml"
+kubectl create deployment http-frontend --image httpd:2.4-alpine --replicas 3 $do > http-frontend.yaml
+kubectl apply -f http-frontedn.yaml
+kubectl apply -f http-frontend.yaml
+kubectl get deployment 
+vi http-frontend.yaml 
+kubectl create deployment httpd-frontend --image httpd:2.4-alpine --replicas 3 $do > http-frontend.yaml
+kubectl apply -f http-frontend.yaml
+history | head -n -1
+history | sed 's/^[ ]*[0-9]*[ ]*//' | head -n -1
+history | sed 's/^[ ]*[0-9]*[ ]*//' | head -n -3
+history | sed 's/^[ ]*[0-9]*[ ]*//' | head -n 
+history | sed 's/^[ ]*[0-9]*[ ]*//'
