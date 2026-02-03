@@ -52,7 +52,30 @@ history | sed 's/^[ ]*[0-9]*[ ]*//'
    27  bapp.yaml
    28  kubectl create service nodeport webapp-service --tcp=8080:8080 $do  > simple-we.yaml
 
-# 
+# imperative commands
 
 kubectl run -name  nginx-pod --image nginx:alpine --namespace default
+
+#manifest with yaml file.
+
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    env: prod
+    app: nginx
+  name: nginx-pod
+spec:
+  containers:
+  - image: nginx:alpine
+    name: nginx-pod
+    resources: # Add this section manually
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+
+
 
